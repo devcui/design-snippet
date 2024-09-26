@@ -1,0 +1,17 @@
+{
+  "name": "design-snippet",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/devcui/design-snippet.git",
+  "author": "devcui <devcui@outlook.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node ./scripts/dev.js",
+    "build": "tsc && sass src:dist --no-source-map"
+  },
+  "dependencies": {
+    "gasp": "^0.0.2",
+    "sass": "^1.79.3",
+    "typescript": "^5.6.2"
+  }
+}
