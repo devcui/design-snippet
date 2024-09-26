@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(
     Flip,
     ScrollTrigger,
-    ScrollSmoother,
     Observer,
     ScrollToPlugin,
     Draggable,
@@ -18,18 +17,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
 });
 
 document.addEventListener("DOMContentLoaded", (event) => {
-  const smoother = ScrollSmoother.create({
-    wrapper: "#wrapper",
-    content: "#content",
-    smooth: 2,
-    speed: 3,
-    effects: true,
-  });
-
-  smoother.effects(".hero__image-cont", {
-    speed: () => gsap.utils.random(0.55, 0.85, 0.05),
-  });
-
   gsap.to(".anim-swipe", {
     yPercent: 300,
     delay: 0.2,
@@ -42,7 +29,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   });
 
   gsap.to(".hero__image-cont > img", {
-    scale: 1.5,
+    scale: 3,
     xPercent: 20,
     scrollTrigger: {
       trigger: ".hero",
