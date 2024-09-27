@@ -39,23 +39,50 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
   });
 
-  gsap.to(".author__graph__img", {
-    right: 0,
+  let tl = gsap.timeline({
     scrollTrigger: {
-      trigger: ".hero",
+      trigger: "#wrapper",
       start: "top top",
-      scrub: true,
+      scrub: 1,
+      snap: {
+        snapTo: "labels",
+        duration: { min: 2, max: 10 },
+        delay: 1,
+        ease: "power1.inOut",
+      },
     },
   });
 
-  gsap.to(".author__title__line", {
-    width: "100%",
-    opacity: 100,
-    scrollTrigger: {
-      trigger: ".hero",
-      start: "top top",
-      scrub: true,
-    },
-  });
-
+  tl.addLabel("start")
+    .from(".author__graph__img", {
+      right: "-100%",
+    })
+    .to(".author__graph__img", {
+      right: 0,
+    })
+    .addLabel("titleLine")
+    .from(".author__title__line", {
+      width: 0,
+      opacity: 0,
+    })
+    .to(".author__title__line", {
+      width: "100%",
+      opacity: 100,
+    })
+    .addLabel("title")
+    .from(".author__title__text", {
+      opacity: 0,
+    })
+    .to(".author__title__text", {
+      opacity: 100,
+      text: "asuka",
+    })
+    .addLabel("titleDesc")
+    .from(".author__title__desc", {
+      opacity: 0,
+    })
+    .to(".author__title__desc", {
+      opacity: 100,
+      text: "this is the demo text aha ya xi asjd awieqoru asdfj asdfijo",
+    });
 });
