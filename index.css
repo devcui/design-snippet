@@ -93,9 +93,14 @@ body {
   color: white;
 }
 
+.author__title__text {
+  min-height: 5%;
+  opacity: 0;
+}
+
 .author__title__line {
   content: "";
-  position: absolute;
+  opacity: 0;
   background-color: white;
   height: 1%;
   width: 0;
@@ -124,24 +129,17 @@ body {
   width: 55%;
 }
 
-.author__graph__img,
-.author__anim-swipe {
+.author__graph__img {
   position: absolute;
-  right: 0;
+  right: -100%;
   height: 100%;
   width: 100%;
+  background-image: url("./assets/root/banner.jpg");
   background-size: cover;
   background-clip: content-box;
   padding-top: 2%;
   padding-bottom: 2%;
   padding-left: 2%;
-}
-
-.author__graph__img {
-  background-image: url("./assets/root/banner.jpg");
-}
-.author__anim-swipe {
-  background-color: #111111;
 }
 
 .author__graph__line {
