@@ -78,6 +78,85 @@ body {
   left: -600%;
 }
 
-.spacer {
-  height: 300vh;
+.author {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.author__title {
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  top: 10%;
+  font-size: 64px;
+  color: white;
+}
+
+.author__title__line {
+  content: "";
+  position: absolute;
+  background-color: white;
+  height: 1%;
+  width: 100%;
+}
+
+.author__title__content {
+  clear: both;
+  position: absolute;
+  top: 45%;
+  left: 10%;
+  width: 20%;
+}
+
+.author__title__desc {
+  color: white;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.author__graph {
+  position: absolute;
+  right: 0;
+  top: 35%;
+  height: 70%;
+  width: 55%;
+}
+
+.author__graph__img {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("./assets/root/banner.jpg");
+  background-size: cover;
+  background-clip: content-box;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 2%;
+}
+
+.author__graph__line {
+  position: absolute;
+  left: -60px;
+  width: calc(100% + 60px);
+  background-color: white;
+}
+
+.author__graph__vertical-line {
+  position: absolute;
+  left: 0.5rem;
+  top: calc((0% + 100px) / -2);
+  height: calc(100% + 100px);
+  width: 0.1rem;
+  background-color: white;
+}
+
+.top {
+  top: 0;
+}
+
+.under {
+  bottom: 0;
 }
