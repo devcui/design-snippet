@@ -147,7 +147,7 @@ body {
   position: absolute;
   direction: rtl;
   right: 0px;
-  width: 0;
+  width: calc(100% + 60px);
   background-color: white;
 }
 
@@ -155,7 +155,7 @@ body {
   position: absolute;
   left: 0.5rem;
   top: calc((0% + 100px) / -2);
-  height: 0;
+  height: calc(100% + 100px);
   width: 0.1rem;
   background-color: white;
 }

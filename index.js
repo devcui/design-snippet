@@ -54,6 +54,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
   });
 
   tl.addLabel("start")
+    .from(".top", {
+      width: 0,
+    })
+    .to(".top", {
+      width: "calc(100% + 60px)",
+    })
     .from(".author__graph__img", {
       right: "-100%",
     })
