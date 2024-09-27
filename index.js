@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     RoughEase,
     ExpoScaleEase,
     SlowMo,
-    CustomEase,
+    CustomEase
   );
 });
 
@@ -38,4 +38,43 @@ document.addEventListener("DOMContentLoaded", (event) => {
       scrub: true,
     },
   });
+
+  // function vertical_line_start() {
+  //   gsap.to(".author__graph__vertical_line", {
+  //     height: `calc(100% + 100px)`,
+  //     duration: 1,
+  //     onComplete: () => {
+  //       gsap.to([".author__graph__vertical_line "], {
+  //         height: `${Math.random() * 100}%`,
+  //         duration: 1.5,
+  //         repeat: -1,
+  //         yoyo: true,
+  //       });
+  //     },
+  //   });
+  // }
+
+  // function author_graph_line_start() {
+  //   gsap.to(".author__graph__line", {
+  //     width: "calc(100% + 60px)",
+  //     duration: 1,
+  //     onComplete: () => {
+  //       gsap.to([".top "], {
+  //         width: `${Math.random() * 100}%`,
+  //         opacity: 0,
+  //         duration: 1,
+  //         repeat: -1,
+  //         yoyo: true,
+  //       });
+
+  //       gsap.to([".under "], {
+  //         width: `${Math.random() * 100}%`,
+  //         opacity: 0,
+  //         duration: 1.5,
+  //         repeat: -1,
+  //         yoyo: true,
+  //       });
+  //     },
+  //   });
+  // }
 });

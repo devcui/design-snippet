@@ -98,7 +98,7 @@ body {
   position: absolute;
   background-color: white;
   height: 1%;
-  width: 100%;
+  width: 0;
 }
 
 .author__title__content {
@@ -124,12 +124,12 @@ body {
   width: 55%;
 }
 
-.author__graph__img {
+.author__graph__img,
+.author__anim-swipe {
   position: absolute;
   right: 0;
   height: 100%;
   width: 100%;
-  background-image: url("./assets/root/banner.jpg");
   background-size: cover;
   background-clip: content-box;
   padding-top: 2%;
@@ -137,18 +137,26 @@ body {
   padding-left: 2%;
 }
 
+.author__graph__img {
+  background-image: url("./assets/root/banner.jpg");
+}
+.author__anim-swipe {
+  background-color: #111111;
+}
+
 .author__graph__line {
   position: absolute;
-  left: -60px;
-  width: calc(100% + 60px);
+  direction: rtl;
+  right: 0px;
+  width: 0;
   background-color: white;
 }
 
-.author__graph__vertical-line {
+.author__graph__vertical_line {
   position: absolute;
   left: 0.5rem;
   top: calc((0% + 100px) / -2);
-  height: calc(100% + 100px);
+  height: 0;
   width: 0.1rem;
   background-color: white;
 }
