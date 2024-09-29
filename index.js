@@ -39,56 +39,85 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
   });
 
-  let tl = gsap.timeline({
+  gsap.to(".author__graph__img", {
+    right: 0,
     scrollTrigger: {
       trigger: "#wrapper",
       start: "top top",
-      scrub: 1,
-      snap: {
-        snapTo: "labels",
-        duration: { min: 2, max: 10 },
-        delay: 1,
-        ease: "power1.inOut",
-      },
+      scrub: true,
+    },
+    delay: 5,
+    duration: 10,
+    ease: "power1.inOut",
+    onComplete: () => {
+      onAuthorGraphImgComplete();
     },
   });
 
-  tl.addLabel("start")
-    .from(".top", {
+  gsap.fromTo(
+    ".author__title__line",
+    {
       width: 0,
-    })
-    .to(".top", {
-      width: "calc(100% + 60px)",
-    })
-    .from(".author__graph__img", {
-      right: "-100%",
-    })
-    .to(".author__graph__img", {
-      right: 0,
-    })
-    .addLabel("titleLine")
-    .from(".author__title__line", {
-      width: 0,
-      opacity: 0,
-    })
-    .to(".author__title__line", {
+    },
+    {
       width: "100%",
       opacity: 100,
-    })
-    .addLabel("title")
-    .from(".author__title__text", {
-      opacity: 0,
-    })
-    .to(".author__title__text", {
+      scrollTrigger: {
+        trigger: "#wrapper",
+        start: "top top",
+        scrub: true,
+      },
+      delay: 5,
+      duration: 10,
+      ease: "power1.inOut",
+      onComplete: () => {
+        onAuthorTitleLineComplete();
+      },
+    }
+  );
+
+  function onAuthorTitleLineComplete() {
+    gsap.to(".author__title__text", {
       opacity: 100,
-      text: "asuka",
-    })
-    .addLabel("titleDesc")
-    .from(".author__title__desc", {
-      opacity: 0,
-    })
-    .to(".author__title__desc", {
-      opacity: 100,
-      text: "this is the demo text aha ya xi asjd awieqoru asdfj asdfijo",
+      text: "ASUKA",
     });
+    gsap.to(".author__title__desc", {
+      opacity: 100,
+      delay: 0.5,
+      duration: 2,
+      ease: "power1.inOut",
+      text: `「よく分からないものを無理して使うからよ」 `,
+    });
+  }
+
+  function onAuthorGraphImgComplete() {
+    gsap.to(".author__graph__vertical_line", {
+      height: `calc(100% + 100px)`,
+      duration: 1,
+      ease: "power1.inOut",
+    });
+    gsap.to([".top"], {
+      width: `calc(100% + 60px)`,
+      opacity: 100,
+      duration: 6,
+      yoyo: true,
+      repeat: -1,
+      ease: "power1.inOut",
+    });
+    gsap.to([".under"], {
+      width: `calc(100% + 60px)`,
+      opacity: 100,
+      duration: 4,
+      yoyo: true,
+      repeat: -1,
+      ease: "power1.inOut",
+    });
+    gsap.to([".author__title__line"], {
+      width: "80%",
+      duration: 1,
+      yoyo: true,
+      repeat: -1,
+      ease: "power1.inOut",
+    });
+  }
 });

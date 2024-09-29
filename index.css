@@ -95,7 +95,7 @@ body {
 
 .author__title__text {
   min-height: 5%;
-  opacity: 100;
+  opacity: 0;
 }
 
 .author__title__line {
@@ -103,7 +103,7 @@ body {
   background-color: white;
   height: 1%;
   width: 100%;
-  opacity: 100;
+  opacity: 0;
 }
 
 .author__title__content {
@@ -120,6 +120,7 @@ body {
   flex-flow: column;
   align-items: center;
   font-size: 32px;
+  opacity: 0;
 }
 
 .author__graph {
@@ -147,7 +148,7 @@ body {
   position: absolute;
   direction: rtl;
   right: 0px;
-  width: calc(100% + 60px);
+  width: 0;
   background-color: white;
 }
 
@@ -155,7 +156,7 @@ body {
   position: absolute;
   left: 0.5rem;
   top: calc((0% + 100px) / -2);
-  height: calc(100% + 100px);
+  height: 0;
   width: 0.1rem;
   background-color: white;
 }
